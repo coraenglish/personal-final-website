@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>muSEAK | Home</title>
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/bci7mcd.css">
+
+  <!-- MDN SHEETS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- js scripts for API calls -->
+  <script src="js/scripts.js"></script>
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+
+</head>
+
+<body id="homeBody" onload="setPageColor(); setHomeBackground(); ">
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <!-- <a class="navbar-brand" href="home.html"><i class="fas fa-headphones-alt"></i> muSEAK</a> -->
+    <a href="home.html"><img id="navbarBrand" class="svg-logo-grayscale" src="images/wordmark.svg" alt="muSEAK" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">search now <i class="fas fa-search"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            color-mode
+          </a>
+          <div id="navDropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="green" onclick="setColor('green')" class="dropdown-item" href="#"><img src="images/green_pallete.png" class="pallete-img"> green</a>
+            <a id="blue" onclick="setColor('blue')" class="dropdown-item" href="#"><img src="images/blue_pallete.png" class="pallete-img"> blue</a>
+            <a id="red" onclick="setColor('red')" class="dropdown-item" href="#"><img src="images/red_pallete.png" class="pallete-img"> red</a>
+            <a id="spring" onclick="setColor('spring')" class="dropdown-item" href="#"><img src="images/spring_pallete.png" class="pallete-img"> spring</a>
+            <a id="cool" onclick="setColor('cool')" class="dropdown-item" href="#"><img src="images/cool_pallete.png" class="pallete-img"> cool</a>
+            <a id="warm" onclick="setColor('warm')" class="dropdown-item" href="#"><img src="images/warm_pallete.png" class="pallete-img"> warm</a>
+            <a id="gray" onclick="setColor('grayscale')" class="dropdown-item" href="#"><img src="images/grayscale_pallete.png" class="pallete-img"> grayscale</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="homepage">
+    <div class="title" align="center">
+      <h2 class="home-h2 title-header">welcome to</h2>
+      <h1 class="home-h1 title-header">muSEAK</h1>
+      <h3 class="home-h3 title-header">your source to find new music</h3>
+      <p class="center" style="margin-top: 7vh;"><a href="#sections"><i class="fas fa-chevron-down fa-3x animated bounce slow infinite"></i></a></p>
+    </div>
+  </div>
+
+
+  <div id="sections">
+    <div class="features">
+      <div class="results-header-alt first">
+        <h2 class="container">Features</h2>
+      </div>
+
+      <div class="container">
+        <div class="home-card">
+        <div class="row features-row">
+          <div class="col-md-4 feature wow animated fadeIn" data-wow-delay="0.5s">
+            <i class="fas fa-external-link-alt fa-7x "></i>
+            <h3>Discover the latest artists.</h3>
+            <p>Give us an artist you enjoy listening to and we'll recommend you similar artists. The era, genre, and popularity of the artist are all factors in our algorithm to provide you with some new artists we hope you will love.</p>
+          </div>
+          <div class="col-md-4 feature wow animated fadeIn" data-wow-delay="1s">
+            <i class="fas fa-heart fa-7x"></i>
+            <h3>Find songs you will love.</h3>
+            <p>Your new go-to song could be on the next page. Continue down the rabbit-hole of recommendations in order to find some truly amazing songs. It all starts with one search...</p>
+          </div>
+          <div class="col-md-4 feature wow animated fadeIn" data-wow-delay="1.5s">
+            <i class="fas fa-globe fa-7x"></i>
+            <h3>Stream online events.</h3>
+            <p>Is your favorite artist having a concert in Australia? Great Britain? Kansas? No problem! Find out where they are playing next. Many concerts are currently being streamed online due to the pandemic with cheaper ticket prices!</p>
+          </div>
+        </div>
+        <a href="search.html"><button class="btn btn-lg explore-btn regular animated pulse slower infinite">find some new music</button></a>
+      </div>
+
+    </div>
+
+  <div class="about ">
+    <div class="results-header-alt">
+      <h2 class="container">About muSEAK</h2>
+    </div>
+    <div class="container wow animated fadeInUp" data-wow-delay="0.3s">
+      <div class="home-card left" style="padding-top:10px">
+        <h4 class="regular">Purpose</h4>
+        <p>Aside from fulfilling the requirements of our final project for CSCE 315, we hope that this page will allow whatever users that come across it a way to find new music and online concert events during the pandemic. Finding new artists and songs is difficult depending on the music streaming platform you use, so we hope that this website will help with that!</p>
+
+        <h4 class="regular">Requirements</h4>
+        <p>This project needed to use three different APIs. We decided to use four! The four that our team chose were the Last.fm, BandsInTown, Musixmatch, and Apple Music APIs.</p>
+        <p>The Last.fm API is the main driving force behind this project, providing similar artists and top tracks when a user searches based on an artist they like.</p>
+        <p>The BandsInTown API is used on each artist page and provides in person or online concerts for that artist.</p>
+        <p>The Musixmatch API provides the lyrics snippet on each song page which gives users with hearing impairments a way to see the lyrics.</p>
+        <p>Lastly, the Apple Music API embeds a player for a requested song, allowing users to enjoy music directly from the website.</p>
+        <h4 class="regular">Accessibility</h4>
+        <p>This webpage has a variety of color palettes for users to choose from. This not only solves the problem of differing tastes, but of certain forms of colorblindness as well. We also allow the hearing impaired to see the lyrics of suggested songs visually if they are have trouble listening to the song on the embedded player.</p>
+
+        <h4 class="regular">A note from the developers</h4>
+        <p>Our team of developers have a wide variety of music tastes and each one of us have found a new artist while creating this product, so we hope you will too!</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="developers">
+    <div class="results-header-alt">
+      <h2 class="container">About the developers</h2>
+    </div>
+    <div class="container">
+
+    <div class="row">
+      <div class="col-lg-6" align="center">
+        <div class="flip-card wow animated fadeInLeft ">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Mitchell Stacha</h3>
+              <img class="dev-image" src="images/mitchell1.jpg" alt="mitchell">
+              <p class="regular">API Team</p>
+              <p class="book-italic">Class of 2022</p>
+            </div>
+            <div class="flip-card-back left">
+              <h3 class="center">About Mitchell</h3>
+              <hr>
+              <p><span class="regular">Hometown:</span> Houston, TX</p>
+              <p><span class="regular">Hobbies:</span> Bowling, Guitar</p>
+              <p><span class="regular">Professional Interests:</span> Software Engineering, App Development, Cybersecurity</p>
+              <p><a class="tag" href="http://people.tamu.edu/~mstacha" target="_blank">visit his website</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" align="center">
+        <div class="flip-card wow animated fadeInRight ">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Cora English</h3>
+              <img class="dev-image" src="images/cora.jpg" alt="cora">
+              <p class="regular">Frontend Developer</p>
+              <p class="book-italic">Class of 2022</p>
+            </div>
+            <div class="flip-card-back left">
+              <h3 class="center">About Cora</h3>
+              <hr>
+              <p><span class="regular">Hometown:</span> Magnolia, TX</p>
+              <p><span class="regular">Hobbies:</span> Volleyball, Piano, Wakeboarding</p>
+              <p><span class="regular">Professional Interests:</span> Web Development, Cryptography</p>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in sapien commodo, condimentum orci quis, aliquet lorem. Vestibulum diam magna, imperdiet vitae diam sit amet, lobortis auctor dui. Sed congue justo vitae interdum pellentesque.</p>  -->
+              <p><a class="tag" href="http://people.tamu.edu/~coraenglish/CSCE-315/index.html" target="_blank">visit her website</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6" align="center">
+        <div class="flip-card wow animated fadeInLeft ">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Nkemdi Anyiam</h3>
+              <img class="dev-image" src="images/nkemdi.png" alt="nkemdi">
+              <p class="regular">Graphic Designer</p>
+              <p class="book-italic">Class of 2022</p>
+            </div>
+            <div class="flip-card-back left">
+              <h3 class="center">About Nkemdi</h3>
+              <hr>
+              <p><span class="regular">Hometown:</span> Richardson, TX</p>
+              <p><span class="regular">Hobbies:</span> Design, Music Production, Gaming</p>
+              <p><span class="regular">Professional Interests:</span> UI/UX, Graphic Design</p>
+              <p><a class="tag" href="https://nkemdianyiam.myportfolio.com/" target="_blank">visit his website</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" align="center">
+        <div class="flip-card wow animated fadeInRight ">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Pranav Konduri</h3>
+              <img class="dev-image" src="images/pranav.jpg" alt="pranav">
+              <p class="regular">API Team</p>
+              <p class="book-italic">Class of 2022</p>
+            </div>
+            <div class="flip-card-back left">
+              <h3 class="center">About Pranav</h3>
+              <hr>
+              <p><span class="regular">Hometown:</span> Plano, TX</p>
+              <p><span class="regular">Hobbies:</span> Tennis, Percussion</p>
+              <p><span class="regular">Professional Interests:</span> Software Engineering, Algorithms, Entrepreneurship</p>
+              <p><a class="tag" href="http://people.tamu.edu/~pranavkonduri" target="_blank">visit his website</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer">
+    <p class="p-footer">© 2020 muSEAK inc.</p>
+  </div>
+
+</div>
+
+
+
+
+  <!-- MDN SHEETS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
+</body>
+
+<!-- used to animate on scroll -->
+<script>
+  $( document ).ready(function() {
+    new WOW().init();
+  });
+</script>
+
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>muSEAK | Artist Results</title>
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/bci7mcd.css">
+
+  <!-- MDN SHEETS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/bci7mcd.css">
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+
+</head>
+
+<body onload="setPageColor(); loadArtistPage(); addCollapse();">
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <a href="home.html"><img id="navbarBrand" class="svg-logo-grayscale" src="images/wordmark.svg" alt="muSEAK" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">search now <i class="fas fa-search"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            color-mode
+          </a>
+          <div id="navDropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="green" onclick="setColor('green')" class="dropdown-item" href="#"><img src="images/green_pallete.png" class="pallete-img"> green</a>
+            <a id="blue" onclick="setColor('blue')" class="dropdown-item" href="#"><img src="images/blue_pallete.png" class="pallete-img"> blue</a>
+            <a id="red" onclick="setColor('red')" class="dropdown-item" href="#"><img src="images/red_pallete.png" class="pallete-img"> red</a>
+            <a id="spring" onclick="setColor('spring')" class="dropdown-item" href="#"><img src="images/spring_pallete.png" class="pallete-img"> spring</a>
+            <a id="cool" onclick="setColor('cool')" class="dropdown-item" href="#"><img src="images/cool_pallete.png" class="pallete-img"> cool</a>
+            <a id="warm" onclick="setColor('warm')" class="dropdown-item" href="#"><img src="images/warm_pallete.png" class="pallete-img"> warm</a>
+            <a id="gray" onclick="setColor('grayscale')" class="dropdown-item" href="#"><img src="images/grayscale_pallete.png" class="pallete-img"> grayscale</a>
+          </div>
+        </li>  
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div class="results" id="resultsCollapse">
+    <div class="results-header">
+      <h1 id="pageTitle" class="container">Artist Name</h1>
+    </div>
+
+
+    <div id="resultHeader1" class="results-header-alt sticky" data-toggle="collapse" href="#artistEvents" role="button"
+      aria-expanded="true" aria-controls="artistEvents">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-10">
+            <h2>Upcoming Events</h2>
+          </div>
+          <div class="col col-lg-2">
+            <h2 class="right"><i id="resultIcon1" class="fas fa-chevron-up"></i></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="artistEvents" class="container collapse show">
+    </div>
+
+    <div id="resultHeader2" class="results-header-alt sticky" data-toggle="collapse" href="#artistInfo" role="button"
+      aria-expanded="true" aria-controls="artistInfo">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-10">
+            <h2>Artist Info</h2>
+          </div>
+          <div class="col col-lg-2">
+            <h2 class="right"><i id="resultIcon2" class="fas fa-chevron-up header-icon"></i></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="artistInfo" class="container collapse show">
+    </div>
+
+    <div id="resultHeader3" class="results-header-alt sticky" data-toggle="collapse" href="#artistTopTracks" role="button"
+      aria-expanded="true" aria-controls="artistTopTracks">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-10">
+            <h2>Top Tracks</h2>
+          </div>
+          <div class="col col-lg-2">
+            <h2 class="right"><i id="resultIcon3" class="fas fa-chevron-up header-icon"></i></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="artistTopTracks" class="container collapse show">
+    </div>
+
+
+    <div id="resultHeader4" class="results-header-alt sticky" data-toggle="collapse" href="#artistSimilarArtists" role="button"
+      aria-expanded="true" aria-controls="artistSimilarArtists">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-10">
+            <h2>Similar Artists</h2>
+          </div>
+          <div class="col col-lg-2">
+            <h2 class="right"><i id="resultIcon4" class="fas fa-chevron-up header-icon"></i></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="artistSimilarArtists" class="container collapse show">
+    </div>
+
+
+
+  </div>
+
+  <div class="footer">
+    <p class="p-footer">© 2020 muSEAK inc.</p>
+  </div>
+
+
+
+  <!-- MDN SHEETS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+  <!-- js scripts for API calls -->
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
